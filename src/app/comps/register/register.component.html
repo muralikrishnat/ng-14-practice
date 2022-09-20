@@ -1,1 +1,108 @@
-<p>register works!</p>
+<div>
+  <h2>Register user</h2>
+  <form #registerForm="ngForm" (submit)="handleRegister(registerForm)">
+    <div>
+      <input
+        #firstname="ngModel"
+        name="firstName"
+        [(ngModel)]="user.firstName"
+        required
+        type="text"
+        placeholder="Firstname"
+      />
+    </div>
+    <div>
+      <input
+        #lastname="ngModel"
+        name="lastName"
+        [(ngModel)]="user.lastName"
+        type="text"
+        placeholder="Lastname"
+      />
+    </div>
+    <div>
+      <input
+        appAgeValidation
+        required
+        #age="ngModel"
+        name="age"
+        [(ngModel)]="user.age"
+        type="number"
+        placeholder="Age"
+      />
+      <div *ngIf="age.invalid && (age.dirty || age.touched)">
+        <div *ngIf="age.errors?.['required']">This field is required.</div>
+        <div *ngIf="age.errors?.['ageInvalid']">
+          Must be minimum 15 years to register.
+        </div>
+      </div>
+    </div>
+    <div>
+      <input
+        #email="ngModel"
+        name="email"
+        [(ngModel)]="user.email"
+        type="email"
+        placeholder="Email"
+      />
+    </div>
+    <div>
+      <input
+        #phone="ngModel"
+        name="phone"
+        [(ngModel)]="user.phone"
+        type="tel"
+        placeholder="Phone"
+      />
+    </div>
+    <div>
+      <select
+        name="country"
+        required
+        [(ngModel)]="user.country"
+        #country="ngModel"
+      >
+        <option value="">Select country</option>
+        <option *ngFor="let c of countries" [value]="c.value">
+          {{ c.name }}
+        </option>
+      </select>
+    </div>
+    <div>
+      Gender:
+      <label [for]="'gender_' + g.value" *ngFor="let g of genders">
+        <input
+          type="radio"
+          [(ngModel)]="user.gender"
+          [value]="g.value"
+          [id]="'gender_' + g.value"
+          name="gender"
+        />
+        {{ g.name }}
+      </label>
+    </div>
+    <div>
+      <input
+        #usernamengModel="ngModel"
+        name="username"
+        [(ngModel)]="user.username"
+        required
+        type="text"
+        placeholder="Username"
+      />
+    </div>
+    <div>
+      <input
+        #passwordngModel="ngModel"
+        name="password"
+        [(ngModel)]="user.password"
+        required
+        type="password"
+        placeholder="Password"
+      />
+    </div>
+    <div>
+      <button [disabled]="registerForm.invalid">Register user</button>
+    </div>
+  </form>
+</div>
