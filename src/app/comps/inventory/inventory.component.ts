@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./inventory.component.css']
 })
 export class InventoryComponent implements OnInit {
-
+  cols = [];
+  rows = [];
   constructor() { }
 
   ngOnInit(): void {
