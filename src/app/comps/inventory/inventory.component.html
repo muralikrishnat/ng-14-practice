@@ -5,7 +5,8 @@
       <th *ngFor="let col of cols">{{ col.display || col.name }}</th>
     </tr>
     <tr *ngFor="let row of rows">
-      <td *ngFor="let col of cols">{{ row[col.name] }}</td>
+      <td *ngFor="let col of cols">{{ row[col.name] | toUpperCase }}</td>
     </tr>
   </table>
 </div> -->
+

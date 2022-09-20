@@ -10,7 +10,6 @@ import { AbstractControl, ValidationErrors, Validator, NG_VALIDATORS } from '@an
 })
 export class AgeValidationDirective implements Validator {
   validate(control: AbstractControl<any, any>): ValidationErrors | null {
-    console.log('control value: ', control.value);
     if (control.value - 0 < 15){
       return { ageInvalid: true };
     }

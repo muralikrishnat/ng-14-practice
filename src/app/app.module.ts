@@ -10,6 +10,7 @@ import { LoginComponent } from './comps/login/login.component';
 import { InventoryComponent } from './comps/inventory/inventory.component';
 import { GlobalHeaderComponent } from './comps/global-header/global-header.component';
 import { AgeValidationDirective } from './directives/age-validation.directive';
+import { CalcagePipe } from './pipes/calcage.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { AgeValidationDirective } from './directives/age-validation.directive';
     LoginComponent,
     InventoryComponent,
     GlobalHeaderComponent,
-    AgeValidationDirective
+    AgeValidationDirective,
+    CalcagePipe
   ],
   imports: [
     BrowserModule,
