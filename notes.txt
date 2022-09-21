@@ -4,6 +4,22 @@
   Added four components and routing
 --------------------------------------------------------------------------------
   Form Validations
-  Custom validator
+  Custom validator (Directive)
   Global header
+--------------------------------------------------------------------------------
+  Pipe - calculate diff in years
+  Service
+  Inventory items (CRUD operations)
+  API integration
 ================================================================================
+
+
+
+
+
+Refs:
+
+https://stackblitz.com/edit/lab14-template-driven-form-validation?file=app%2Fapp.component.html
+https://www.bezkoder.com/angular-14-form-validation/
+
+https://efficientcoder.net/angular-14-httpclient/

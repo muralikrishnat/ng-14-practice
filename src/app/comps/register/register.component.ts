@@ -8,7 +8,9 @@ import globaldata from 'src/app/data/globaldata';
 export class RegisterComponent implements OnInit {
   user: any = {
     gender: '',
-    country: ''
+    country: '',
+    firstName: '',
+    lastName: ''
   };
   genders = globaldata.GENDERS;
   countries = globaldata.COUNTRIES;

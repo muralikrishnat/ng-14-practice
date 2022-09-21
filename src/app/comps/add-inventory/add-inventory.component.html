@@ -1,0 +1,76 @@
+<div>
+  <form #recordForm="ngForm" (submit)="handleRecord()">
+    <div>
+      <label for="name">Name</label>
+      <input
+        #name="ngModel"
+        name="name"
+        [(ngModel)]="record.name"
+        required
+        type="text"
+        autocomplete="off"
+        placeholder="Name"
+      />
+    </div>
+
+    <div>
+      <label for="name">Category</label>
+      <select
+        name="category"
+        required
+        [(ngModel)]="record.category"
+        #category="ngModel"
+      >
+        <option value="">Select category</option>
+        <option *ngFor="let c of categories" [value]="c.name">
+          {{ c.name }}
+        </option>
+      </select>
+    </div>
+
+    <div>
+      <label for="price">Price</label>
+      <input
+        #price="ngModel"
+        name="price"
+        autocomplete="off"
+        [(ngModel)]="record.price"
+        (keyup)="setPrice()"
+        (blur)="roundPrice()"
+        required
+        type="text"
+        placeholder="Price"
+      />
+    </div>
+
+    <div>
+      Cuurency:
+      <label [for]="'gender_' + g.value" *ngFor="let g of currencies">
+        <input
+          type="radio"
+          [(ngModel)]="record.currency"
+          [value]="g.value"
+          [id]="'currency_' + g.value"
+          name="currency"
+        />
+        {{ g.name }}
+      </label>
+    </div>
+
+    <div>
+      <label for="name">Shipping date: </label>
+      <input
+        #shippingdate="ngModel"
+        name="shippingdate"
+        [(ngModel)]="record.shippingDate"
+        required
+        type="date"
+        placeholder="Name"
+      />
+    </div>
+
+    <div>
+      <button [disabled]="recordForm.invalid"> Add inventory item </button>
+    </div>
+  </form>
+</div>
