@@ -8,6 +8,9 @@
   Global header
 --------------------------------------------------------------------------------
   Pipe - calculate diff in years
+  Service
+  Inventory items (CRUD operations)
+  API integration
 ================================================================================
 
 
