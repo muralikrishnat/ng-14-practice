@@ -1,1 +1,94 @@
 /* You can add global styles to this file, and also import other style files */
+
+.d-flex {
+  display: flex;
+}
+
+.d-flex>div {
+  flex: 1;
+}
+
+.align-items-center {
+  align-items: center;
+}
+.m-1 {
+  margin: 1rem;
+}
+.mx-1 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.mt-1 {
+  margin-top: 1rem;
+}
+.mb-1 {
+  margin-bottom: 1rem;
+}
+.p-4 {
+  padding: 4rem;
+}
+
+.p-3 {
+  padding: 3rem;
+}
+
+.p-2 {
+  padding: 2rem;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.px-1 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+button {
+  border: 1px solid transparent;
+  background-color: #4f2e1f;
+  color: white;
+  border-radius: .25rem;
+  padding: .25rem .5rem;
+  cursor: pointer;
+}
+
+button:hover {
+  color: #4f2e1f;
+  background-color: white;
+  border-color: #4f2e1f;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table td,
+table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table tr:hover {
+  background-color: #ddd;
+}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+table .table-actions__link {
+  text-decoration: none;
+}
+table .table-actions__link:hover {
+  color: #04AA6D;
+}

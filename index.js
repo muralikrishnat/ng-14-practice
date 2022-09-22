@@ -29,12 +29,13 @@ const requestHandler = (request, response) => {
           itemToUpdate[x] = requestBody[x];
         });
       } else {
-        requestBody['id'] = (new Date()).getTime();
+        requestBody['id'] = (new Date()).getTime() + '';
         records.push(requestBody);
       }
     }
     
     if(request.url.indexOf('reset') >= 0){
+      records = [];
       records = require('./records.json');
     }
     if(params.get('id')) {
@@ -57,3 +58,4 @@ const requestHandler = (request, response) => {
 require("http").createServer(requestHandler).listen(3434, () => {
   console.log('Server listening 3434');
 });
+
