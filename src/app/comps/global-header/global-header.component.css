@@ -1,0 +1,17 @@
+.global-header {
+  background-color: aquamarine;
+}
+.global-header nav ul {
+  list-style: none;
+  display: flex;
+}
+.global-header nav ul li {
+  margin: 0 .5rem;
+}
+.global-header nav ul li a {
+  text-decoration: none;
+  padding: .25rem .5rem;
+}
+.global-header nav ul li a:hover {
+  background-color: white;
+}
